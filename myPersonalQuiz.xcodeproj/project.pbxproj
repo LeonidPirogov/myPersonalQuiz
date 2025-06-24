@@ -14,7 +14,7 @@
 		B3FF23802E082E1E00AC1577 /* Exceptions for "myPersonalQuiz" folder in "myPersonalQuiz" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = B3FF236D2E082E1C00AC1577 /* myPersonalQuiz */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2F54D8859X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = myPersonalQuiz/Info.plist;
+				INFOPLIST_FILE = myPersonalQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -180,7 +180,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2F54D8859X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = myPersonalQuiz/Info.plist;
+				INFOPLIST_FILE = myPersonalQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
