@@ -13,8 +13,6 @@ final class ResultViewController: UIViewController {
     @IBOutlet var definitionLabel: UILabel!
     
     var answers: [Answer] = []
-    // тут будет массив с выбранными ответами пользователя
-    // мне нужно посмотреть какое животное встречается чаще остальных и выдать в соответствии с этим животным результат - определить наиболее встречающийся тип животного
     
     override func viewDidLoad() {
         super.viewDidLoad()

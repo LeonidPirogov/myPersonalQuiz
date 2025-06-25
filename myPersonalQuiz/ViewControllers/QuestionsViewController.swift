@@ -42,8 +42,6 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // реализовать этот метод для передачи данных по сигвею
-        // надо передать массив answersChosen на вью ResultViewController и далее идем в этот View
         if let resultVC = segue.destination as? ResultViewController {
             resultVC.answers = answersChosen
         }
