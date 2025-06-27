@@ -11,7 +11,7 @@ struct Question {
     let answers: [Answer]
     
     static func getQuestions() -> [Question] {
-        [
+         [
             Question(
                 title: "Какую пищу вы предпочитаете?",
                 type: .single,

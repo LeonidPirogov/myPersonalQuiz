@@ -332,7 +332,7 @@
                     <navigationItem key="navigationItem" title="Результат" largeTitleDisplayMode="always" id="6OP-yo-RYc">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xt1-1H-ppQ">
                             <connections>
-                                <action selector="doneButtonAction:" destination="TCH-HK-tTR" id="KqJ-Ir-b0J"/>
+                                <action selector="doneButtonPressed:" destination="TCH-HK-tTR" id="KqJ-Ir-b0J"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

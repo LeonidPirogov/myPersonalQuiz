@@ -17,21 +17,32 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        calculateMostCommonAnswer()
+        updateResult()
     }
     
-    @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
-    
-    private func calculateMostCommonAnswer() {
-        let animalCounts = Dictionary(grouping: answers, by: { $0.animal })
-            .mapValues { $0.count }
+}
+
+// MARK: - Private Methods
+extension ResultViewController {
+    private func updateResult() {
+        var frequencyOfAnimals: [Animal: Int] = [:]
+        let animals = answers.map {$0.animal}
         
-        if let mostCommonAnswer = animalCounts.max(by: { $0.value < $1.value }) {
-            animalLabel.text = "Вы - \(mostCommonAnswer.key.rawValue)"
-            definitionLabel.text = mostCommonAnswer.key.definition
+        for animal in animals {
+            frequencyOfAnimals[animal, default: 0] += 1
         }
+        
+        let sortedFrequentAnimals = frequencyOfAnimals.sorted{ $0.value > $1.value }
+        guard let mostFrequentAnimal = sortedFrequentAnimals.first?.key else { return }
+        
+        updateUI(with: mostFrequentAnimal)
+    }
+    
+    private func updateUI(with animal: Animal) {
+        animalLabel.text = "Вы - \(animal.rawValue)"
+        definitionLabel.text = animal.definition
     }
 }
